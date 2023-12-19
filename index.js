@@ -1,11 +1,10 @@
-// You can import API functions like this from D3.js.
-import { select } from 'd3';
+import {getCars} from "./getCars.js";
+import {generateReport} from "./generateReport.js"
 
-// You can import local ES6 modules like this. See message.js!
-import { message } from './myMessage';
+document.getElementById('message-element').textContent = 'Loading...';
 
-// This line uses D3 to set the text of the message div.
-select('#message').text(message);
-const f = 5;
+getCars().then(cars => {
+    const message = generateReport(cars, 2000);
+    document.getElementById('message-element').textContent = message;
+})
 
-const reged = /fdass/g;
