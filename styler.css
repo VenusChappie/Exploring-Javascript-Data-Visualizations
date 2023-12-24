@@ -1,6 +1,6 @@
 body{
-    font-size: 3em;
-    font-family: monospace;
+    margin: 0px;
+    overflow: hidden;
 }
 
 .highlighted    {
